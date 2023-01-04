@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<response xmlns="http://www.hp.com/go/exstream/schema/cc-actions">
+  <type>CREATE_JOB_DEF</type>
+  <attribute name="job_definition_name">
+    <value>EE-MEDICAID-NONELIGIBILITY-SIT5</value>
+  </attribute>
+  <attribute name="description" value=""/>
+  <attribute name="bundling_type" value="Normal"/>
+  <attribute name="priority" value="5"/>
+  <attribute name="engine_name" value="DBCS"/>
+  <attribute name="job_delivery_type" value="Fire And Forget"/>
+  <attribute name="job_request_type" value="ON_DEMAND"/>
+  <attribute name="receive_full_report" value="false"/>
+  <attribute name="variables">
+    <mapOfMaps>
+      <entryMap name="DC_RequestId">
+        <map>
+          <entry name="rewritable" value="true"/>
+          <entry name="name" value="DC_RequestId"/>
+          <entry name="description">
+            <value>Used internally for data channel request</value>
+          </entry>
+          <entry name="type" value="String"/>
+          <entry name="value" value=""/>
+        </map>
+      </entryMap>
+      <entryMap name="SERVICE_NAME">
+        <map>
+          <entry name="rewritable" value="false"/>
+          <entry name="name" value="SERVICE_NAME"/>
+          <entry name="description" value=""/>
+          <entry name="type" value="String"/>
+          <entry name="value" value="getDocument"/>
+        </map>
+      </entryMap>
+      <entryMap name="AGENCY">
+        <map>
+          <entry name="rewritable" value="false"/>
+          <entry name="name" value="AGENCY"/>
+          <entry name="description" value=""/>
+          <entry name="type" value="String"/>
+          <entry name="value" value="LDH"/>
+        </map>
+      </entryMap>
+      <entryMap name="ACCOUNT_ID">
+        <map>
+          <entry name="rewritable" value="false"/>
+          <entry name="name" value="ACCOUNT_ID"/>
+          <entry name="description" value=""/>
+          <entry name="type" value="String"/>
+          <entry name="value" value="LDH_EE"/>
+        </map>
+      </entryMap>
+      <entryMap name="OUTPUTPDF">
+        <map>
+          <entry name="rewritable" value="false"/>
+          <entry name="name" value="OUTPUTPDF"/>
+          <entry name="description" value=""/>
+          <entry name="type" value="File"/>
+          <entry name="value" value="Out.pdf"/>
+        </map>
+      </entryMap>
+      <entryMap name="%triggerJob">
+        <map>
+          <entry name="rewritable" value="true"/>
+          <entry name="name" value="%triggerJob"/>
+          <entry name="description" value=""/>
+          <entry name="type" value="Boolean"/>
+          <entry name="value" value="false"/>
+        </map>
+      </entryMap>
+      <entryMap name="DRV">
+        <map>
+          <entry name="rewritable" value="true"/>
+          <entry name="name" value="DRV"/>
+          <entry name="description" value="Driver Variable"/>
+          <entry name="type" value="File"/>
+          <entry name="value">
+            <value>/apps/stage/LaMedsNonEligibilityDataFile.xml</value>
+          </entry>
+        </map>
+      </entryMap>
+      <entryMap name="CC_JobId">
+        <map>
+          <entry name="rewritable" value="false"/>
+          <entry name="name" value="CC_JobId"/>
+          <entry name="description" value=""/>
+          <entry name="type" value="Integer"/>
+          <entry name="value" value="${id}"/>
+        </map>
+      </entryMap>
+    </mapOfMaps>
+  </attribute>
+  <attribute name="phase_action">
+    <mapOfActions>
+      <entryMap name="starttime">
+        <action>
+          <type>CREATE_PHASE</type>
+          <attribute name="type" value="External Program"/>
+          <attribute name="phase_name" value="starttime"/>
+          <attribute name="external_programs">
+            <mapOfMaps>
+              <entryMap name="ExternalProgram1">
+                <map>
+                  <entry name="extProgramReturnCode" value=""/>
+                  <entry name="extProgramError" value=""/>
+                  <entry name="extProgramOutPut" value=""/>
+                  <entry name="update_file" value=""/>
+                  <entry name="arguments" value=""/>
+                  <entry name="command">
+                    <value>/apps/externalprogram/common/starttime.sh</value>
+                  </entry>
+                  <entry name="external_program_order" value="2"/>
+                </map>
+              </entryMap>
+            </mapOfMaps>
+          </attribute>
+          <attribute name="conditions">
+            <mapOfMaps/>
+          </attribute>
+          <attribute name="index" value="0"/>
+        </action>
+      </entryMap>
+      <entryMap name="First Composition">
+        <action>
+          <type>CREATE_PHASE</type>
+          <attribute name="phase_name" value="First Composition"/>
+          <attribute name="type">
+            <value>First Composition</value>
+          </attribute>
+          <attribute name="primary_package">
+            <value>NonEligibility_SIT5.pub</value>
+          </attribute>
+          <attribute name="archive_packages" value="false"/>
+          <attribute name="varsets">
+            <list/>
+          </attribute>
+          <attribute name="highest_engine_return_code" value="Errors"/>
+          <attribute name="fileMappings">
+            <mapOfMaps>
+              <entryMap name="DRV">
+                <map>
+                  <entry name="dialogue_type" value="DRIVER"/>
+                  <entry name="variable_name" value="DRV"/>
+                  <entry name="symbolic_file" value="DRV"/>
+                </map>
+              </entryMap>
+              <entryMap name="OUTPUTPDF">
+                <map>
+                  <entry name="dialogue_type" value="OUTPUT"/>
+                  <entry name="variable_name" value="OUTPUTPDF"/>
+                  <entry name="symbolic_file" value="OUTPUTPDF"/>
+                </map>
+              </entryMap>
+            </mapOfMaps>
+          </attribute>
+          <attribute name="output_file" value=""/>
+          <attribute name="index" value="1"/>
+        </action>
+      </entryMap>
+      <entryMap name="endtime">
+        <action>
+          <type>CREATE_PHASE</type>
+          <attribute name="type" value="External Program"/>
+          <attribute name="phase_name" value="endtime"/>
+          <attribute name="external_programs">
+            <mapOfMaps>
+              <entryMap name="ExternalProgram1">
+                <map>
+                  <entry name="extProgramReturnCode" value=""/>
+                  <entry name="extProgramError" value=""/>
+                  <entry name="extProgramOutPut" value=""/>
+                  <entry name="update_file" value=""/>
+                  <entry name="arguments">
+                    <value>${variables.SERVICE_NAME} ${variables.AGENCY} ${variables.ACCOUNT_ID} '${now()}'</value>
+                  </entry>
+                  <entry name="command">
+                    <value>/apps/externalprogram/common/endtime.sh</value>
+                  </entry>
+                  <entry name="external_program_order" value="2"/>
+                </map>
+              </entryMap>
+            </mapOfMaps>
+          </attribute>
+          <attribute name="conditions">
+            <mapOfMaps/>
+          </attribute>
+          <attribute name="index" value="2"/>
+        </action>
+      </entryMap>
+    </mapOfActions>
+  </attribute>
+  <attribute name="cluster_job_execution_mode" value="NORMAL"/>
+  <attribute name="node_affinity" value="ALL"/>
+  <attribute name="node_names">
+    <list/>
+  </attribute>
+</response>

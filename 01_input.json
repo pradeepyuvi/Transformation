@@ -1,0 +1,519 @@
+{
+    "response": {
+       "type": "STATUS_RESPONSE",
+       "attribute": [
+          {
+             "_name": "status_code",
+             "_value": "1001"
+          },
+          {
+             "_name": "status_detail",
+             "_value": "OK"
+          },
+          {
+             "value": "EE-MEDICAID-APP-CENTER-SIT5",
+             "_name": "job_definition_name"
+          },
+          {
+             "_name": "description",
+             "_value": ""
+          },
+          {
+             "_name": "bundling_type",
+             "_value": "Normal"
+          },
+          {
+             "_name": "priority",
+             "_value": "5"
+          },
+          {
+             "_name": "engine_name",
+             "_value": "DBCS"
+          },
+          {
+             "_name": "job_delivery_type",
+             "_value": "Fire And Forget"
+          },
+          {
+             "_name": "job_request_type",
+             "_value": "ON_DEMAND"
+          },
+          {
+             "_name": "receive_full_report",
+             "_value": "false"
+          },
+          {
+             "mapOfMaps": {
+                "entryMap": [
+                   {
+                      "map": {
+                         "entry": [
+                            {
+                               "_name": "rewritable",
+                               "_value": "true"
+                            },
+                            {
+                               "_name": "name",
+                               "_value": "DC_RequestId"
+                            },
+                            {
+                               "value": "Used internally for data channel request",
+                               "_name": "description"
+                            },
+                            {
+                               "_name": "type",
+                               "_value": "String"
+                            },
+                            {
+                               "_name": "value",
+                               "_value": ""
+                            }
+                         ]
+                      },
+                      "_name": "DC_RequestId"
+                   },
+                   {
+                      "map": {
+                         "entry": [
+                            {
+                               "_name": "rewritable",
+                               "_value": "false"
+                            },
+                            {
+                               "_name": "name",
+                               "_value": "SERVICE_NAME"
+                            },
+                            {
+                               "_name": "description",
+                               "_value": ""
+                            },
+                            {
+                               "_name": "type",
+                               "_value": "String"
+                            },
+                            {
+                               "_name": "value",
+                               "_value": "getDocument"
+                            }
+                         ]
+                      },
+                      "_name": "SERVICE_NAME"
+                   },
+                   {
+                      "map": {
+                         "entry": [
+                            {
+                               "_name": "rewritable",
+                               "_value": "false"
+                            },
+                            {
+                               "_name": "name",
+                               "_value": "AGENCY"
+                            },
+                            {
+                               "_name": "description",
+                               "_value": ""
+                            },
+                            {
+                               "_name": "type",
+                               "_value": "String"
+                            },
+                            {
+                               "_name": "value",
+                               "_value": "LDH"
+                            }
+                         ]
+                      },
+                      "_name": "AGENCY"
+                   },
+                   {
+                      "map": {
+                         "entry": [
+                            {
+                               "_name": "rewritable",
+                               "_value": "false"
+                            },
+                            {
+                               "_name": "name",
+                               "_value": "ACCOUNT_ID"
+                            },
+                            {
+                               "_name": "description",
+                               "_value": ""
+                            },
+                            {
+                               "_name": "type",
+                               "_value": "String"
+                            },
+                            {
+                               "_name": "value",
+                               "_value": "LDH-EE"
+                            }
+                         ]
+                      },
+                      "_name": "ACCOUNT_ID"
+                   },
+                   {
+                      "map": {
+                         "entry": [
+                            {
+                               "_name": "rewritable",
+                               "_value": "false"
+                            },
+                            {
+                               "_name": "name",
+                               "_value": "OUTPUTPDF"
+                            },
+                            {
+                               "_name": "description",
+                               "_value": ""
+                            },
+                            {
+                               "_name": "type",
+                               "_value": "File"
+                            },
+                            {
+                               "value": "LA_APP_CENTER.pdf",
+                               "_name": "value"
+                            }
+                         ]
+                      },
+                      "_name": "OUTPUTPDF"
+                   },
+                   {
+                      "map": {
+                         "entry": [
+                            {
+                               "_name": "rewritable",
+                               "_value": "true"
+                            },
+                            {
+                               "_name": "name",
+                               "_value": "%triggerJob"
+                            },
+                            {
+                               "_name": "description",
+                               "_value": ""
+                            },
+                            {
+                               "_name": "type",
+                               "_value": "Boolean"
+                            },
+                            {
+                               "_name": "value",
+                               "_value": "false"
+                            }
+                         ]
+                      },
+                      "_name": "%triggerJob"
+                   },
+                   {
+                      "map": {
+                         "entry": [
+                            {
+                               "_name": "rewritable",
+                               "_value": "true"
+                            },
+                            {
+                               "_name": "name",
+                               "_value": "DRV"
+                            },
+                            {
+                               "_name": "description",
+                               "_value": "Driver File"
+                            },
+                            {
+                               "_name": "type",
+                               "_value": "File"
+                            },
+                            {
+                               "value": "/apps/stage/Pubs/AppCenterEnrollmentRequestPdfXml.xml",
+                               "_name": "value"
+                            }
+                         ]
+                      },
+                      "_name": "DRV"
+                   },
+                   {
+                      "map": {
+                         "entry": [
+                            {
+                               "_name": "rewritable",
+                               "_value": "false"
+                            },
+                            {
+                               "_name": "name",
+                               "_value": "CC_JobId"
+                            },
+                            {
+                               "_name": "description",
+                               "_value": ""
+                            },
+                            {
+                               "_name": "type",
+                               "_value": "Integer"
+                            },
+                            {
+                               "_name": "value",
+                               "_value": "${id}"
+                            }
+                         ]
+                      },
+                      "_name": "CC_JobId"
+                   }
+                ]
+             },
+             "_name": "variables"
+          },
+          {
+             "mapOfActionResponses": {
+                "entryMap": [
+                   {
+                      "action": {
+                         "type": "STATUS_RESPONSE",
+                         "attribute": [
+                            {
+                               "_name": "status_code",
+                               "_value": "1001"
+                            },
+                            {
+                               "_name": "status_detail",
+                               "_value": "OK"
+                            },
+                            {
+                               "_name": "type",
+                               "_value": "External Program"
+                            },
+                            {
+                               "mapOfMaps": {
+                                  "entryMap": [
+                                     {
+                                        "map": {
+                                           "entry": [
+                                              {
+                                                 "_name": "extProgramReturnCode",
+                                                 "_value": ""
+                                              },
+                                              {
+                                                 "_name": "extProgramError",
+                                                 "_value": ""
+                                              },
+                                              {
+                                                 "_name": "extProgramOutPut",
+                                                 "_value": ""
+                                              },
+                                              {
+                                                 "_name": "update_file",
+                                                 "_value": ""
+                                              },
+                                              {
+                                                 "_name": "arguments",
+                                                 "_value": ""
+                                              },
+                                              {
+                                                 "value": "/apps/externalprogram/common/starttime.sh",
+                                                 "_name": "command"
+                                              },
+                                              {
+                                                 "_name": "external_program_order",
+                                                 "_value": "2"
+                                              }
+                                           ]
+                                        },
+                                        "_name": "ExternalProgram1"
+                                     }
+                                  ]
+                               },
+                               "_name": "external_programs"
+                            },
+                            {
+                               "_name": "conditions"
+                            }
+                         ]
+                      },
+                      "_name": "starttime"
+                   }
+                ]
+             },
+             "_name": "starttime"
+          },
+          {
+             "mapOfActionResponses": {
+                "entryMap": [
+                   {
+                      "action": {
+                         "type": "STATUS_RESPONSE",
+                         "attribute": [
+                            {
+                               "_name": "status_code",
+                               "_value": "1001"
+                            },
+                            {
+                               "_name": "status_detail",
+                               "_value": "OK"
+                            },
+                            {
+                               "value": "First Composition",
+                               "_name": "type"
+                            },
+                            {
+                               "value": "AppCenterEnrollmentRequest_SIT5.pub",
+                               "_name": "primary_package"
+                            },
+                            {
+                               "_name": "archive_packages",
+                               "_value": "false"
+                            },
+                            {
+                               "list": "",
+                               "_name": "varsets"
+                            },
+                            {
+                               "_name": "highest_engine_return_code",
+                               "_value": "Errors"
+                            },
+                            {
+                               "mapOfMaps": {
+                                  "entryMap": [
+                                     {
+                                        "map": {
+                                           "entry": [
+                                              {
+                                                 "_name": "dialogue_type",
+                                                 "_value": "DRIVER"
+                                              },
+                                              {
+                                                 "_name": "variable_name",
+                                                 "_value": "DRV"
+                                              },
+                                              {
+                                                 "_name": "symbolic_file",
+                                                 "_value": "DRV"
+                                              }
+                                           ]
+                                        },
+                                        "_name": "DRV"
+                                     },
+                                     {
+                                        "map": {
+                                           "entry": [
+                                              {
+                                                 "_name": "dialogue_type",
+                                                 "_value": "OUTPUT"
+                                              },
+                                              {
+                                                 "_name": "variable_name",
+                                                 "_value": "OUTPUTPDF"
+                                              },
+                                              {
+                                                 "_name": "symbolic_file",
+                                                 "_value": "OUTPUTPDF"
+                                              }
+                                           ]
+                                        },
+                                        "_name": "OUTPUTPDF"
+                                     }
+                                  ]
+                               },
+                               "_name": "fileMappings"
+                            },
+                            {
+                               "_name": "output_file",
+                               "_value": ""
+                            }
+                         ]
+                      },
+                      "_name": "First Composition"
+                   }
+                ]
+             },
+             "_name": "First Composition"
+          },
+          {
+             "mapOfActionResponses": {
+                "entryMap": [
+                   {
+                      "action": {
+                         "type": "STATUS_RESPONSE",
+                         "attribute": [
+                            {
+                               "_name": "status_code",
+                               "_value": "1001"
+                            },
+                            {
+                               "_name": "status_detail",
+                               "_value": "OK"
+                            },
+                            {
+                               "_name": "type",
+                               "_value": "External Program"
+                            },
+                            {
+                               "mapOfMaps": {
+                                  "entryMap": [
+                                     {
+                                        "map": {
+                                           "entry": [
+                                              {
+                                                 "_name": "extProgramReturnCode",
+                                                 "_value": ""
+                                              },
+                                              {
+                                                 "_name": "extProgramError",
+                                                 "_value": ""
+                                              },
+                                              {
+                                                 "_name": "extProgramOutPut",
+                                                 "_value": ""
+                                              },
+                                              {
+                                                 "_name": "update_file",
+                                                 "_value": ""
+                                              },
+                                              {
+                                                 "value": "${variables.SERVICE_NAME} ${variables.AGENCY} ${variables.ACCOUNT_ID} '${now()}'",
+                                                 "_name": "arguments"
+                                              },
+                                              {
+                                                 "value": "/apps/externalprogram/common/endtime.sh",
+                                                 "_name": "command"
+                                              },
+                                              {
+                                                 "_name": "external_program_order",
+                                                 "_value": "2"
+                                              }
+                                           ]
+                                        },
+                                        "_name": "ExternalProgram1"
+                                     }
+                                  ]
+                               },
+                               "_name": "external_programs"
+                            },
+                            {
+                               "_name": "conditions"
+                            }
+                         ]
+                      },
+                      "_name": "endtime"
+                   }
+                ]
+             },
+             "_name": "endtime"
+          },
+          {
+             "_name": "cluster_job_execution_mode",
+             "_value": "NORMAL"
+          },
+          {
+             "_name": "node_affinity",
+             "_value": "ALL"
+          },
+          {
+             "list": "",
+             "_name": "node_names"
+          }
+       ],
+       "_xmlns": "http://www.hp.com/go/exstream/schema/cc-actions"
+    }
+ }
